@@ -26,3 +26,15 @@ Feature: Application login
     | debituser   | hello123    |
     | stockuser   | stok3453    |
     | credituser  | lpo7474     |
+
+  Scenario: User page default Sign Up
+
+    Given User is on Practice landing page
+    When User Signup into application
+    | yehor          |
+    | yehorychev     |
+    | egor@test.com  |
+    | 6506564655     |
+    Then Home Page is displayed
+    And Cards are displayed
+
