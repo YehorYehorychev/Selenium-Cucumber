@@ -16,8 +16,15 @@ public class MainSteps {
         System.out.printf(username + " and password is: " + password);
     }
 
+    @When("User login into application with {string} and password {string} combination")
+    public void user_login_into_application_with_and_password_combination(String username, String password) {
+        // Write code here that turns the phrase above into concrete actions
+        System.out.printf(username + " and password is: " + password);
+    }
+
     @Then("Home Page is displayed")
     public void home_page_is_displayed() {
+        System.out.println("");
         System.out.println("Home Page is displayed");
     }
 

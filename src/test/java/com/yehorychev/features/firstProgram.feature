@@ -13,3 +13,16 @@ Feature: Application login
     When User login into application with "user" and password "8878"
     Then Home Page is displayed
     And Cards are displayed
+
+  Scenario Outline: User page default login
+
+    Given User is on NetBanking landing page
+    When User login into application with "<Username>" and password "<Password>" combination
+    Then Home Page is displayed
+    And Cards are displayed
+
+    Examples:
+    | Username    | Password    |
+    | debituser   | hello123    |
+    | stockuser   | stok3453    |
+    | credituser  | lpo7474     |
