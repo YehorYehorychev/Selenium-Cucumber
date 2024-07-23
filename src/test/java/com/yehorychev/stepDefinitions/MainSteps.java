@@ -1,5 +1,6 @@
 package com.yehorychev.stepDefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -17,6 +18,24 @@ public class MainSteps {
     public void user_is_on_practice_landing_page() {
         System.out.println("User is on Practice website");
     }
+
+    @Given("Setup the entries in database")
+    public void setup_the_entries_in_database() {
+        System.out.println("*****************************");
+        System.out.println("Setup the entries in database");
+    }
+    @When("Launch the browser from config variables")
+    public void launch_the_browser_from_config_variables() {
+        System.out.println("*****************************");
+        System.out.println("Launch the browser from config variables");
+    }
+    @And("Hit the home page url of banking site")
+    public void hit_the_home_page_url_of_banking_site() {
+        System.out.println("*****************************");
+        System.out.println("Hit the home page url of banking site");
+        System.out.println("-----------------------------");
+    }
+
     @When("User Signup into application")
     public void user_signup_into_application(List<String> data) {
         System.out.println(data.get(0));

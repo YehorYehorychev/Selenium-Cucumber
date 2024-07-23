@@ -1,5 +1,10 @@
 Feature: Application login
 
+  Background:
+    Given Setup the entries in database
+    When Launch the browser from config variables
+    And Hit the home page url of banking site
+
   @RegressionTest
   Scenario: Admin page default login
 
@@ -25,20 +30,20 @@ Feature: Application login
     And Cards are displayed
 
     Examples:
-    | Username    | Password    |
-    | debituser   | hello123    |
-    | stockuser   | stok3453    |
-    | credituser  | lpo7474     |
+      | Username   | Password |
+      | debituser  | hello123 |
+      | stockuser  | stok3453 |
+      | credituser | lpo7474  |
 
   @SmokeTest @RegressionTest
   Scenario: User page default Sign Up
 
     Given User is on Practice landing page
     When User Signup into application
-    | yehor          |
-    | yehorychev     |
-    | egor@test.com  |
-    | 6506564655     |
+      | yehor         |
+      | yehorychev    |
+      | egor@test.com |
+      | 6506564655    |
     Then Home Page is displayed
     And Cards are displayed
 
