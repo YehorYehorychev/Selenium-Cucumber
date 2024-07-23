@@ -1,5 +1,6 @@
 Feature: Application login
 
+  @RegressionTest
   Scenario: Admin page default login
 
     Given User is on NetBanking landing page
@@ -7,6 +8,7 @@ Feature: Application login
     Then Home Page is displayed
     And Cards are displayed
 
+  @MobileTest
   Scenario: User page default login
 
     Given User is on NetBanking landing page
@@ -14,6 +16,7 @@ Feature: Application login
     Then Home Page is displayed
     And Cards are displayed
 
+  @RegressionTest
   Scenario Outline: User page default login
 
     Given User is on NetBanking landing page
@@ -27,6 +30,7 @@ Feature: Application login
     | stockuser   | stok3453    |
     | credituser  | lpo7474     |
 
+  @SmokeTest @RegressionTest
   Scenario: User page default Sign Up
 
     Given User is on Practice landing page
