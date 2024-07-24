@@ -14,7 +14,7 @@ Feature: Application login
     Then Home Page is displayed
     And Cards are displayed
 
-  @SmokeTest @RegressionTest
+  @SmokeTest @RegressionTest @Mortgage
   Scenario Outline: User page default login
 
     Given User is on NetBanking landing page
