@@ -5,7 +5,8 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(features = "src/test/java/com/yehorychev/features",
         glue = "com.yehorychev.stepDefinitions", monochrome = true,
-        tags = "@@NetBanking or @Mortgage")
+        tags = "@NetBanking or @Mortgage",
+        plugin = {"pretty", "html:target/cucumber.html"})
 public class TestNGRunner extends AbstractTestNGCucumberTests {
 
 }
