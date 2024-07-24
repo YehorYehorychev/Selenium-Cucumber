@@ -3,6 +3,7 @@ Feature: Application login
   Background:
     When Launch the browser from config variables
     And Hit the home page url of banking site
+    # Before -> Background -> Scenario -> After
 
 
   @MobileTest @NetBanking
