@@ -1,9 +1,9 @@
 Feature: Application login
 
   Background:
-    Given Setup the entries in database
     When Launch the browser from config variables
     And Hit the home page url of banking site
+    # Before -> Background -> Scenario -> After
 
 
   @MobileTest @NetBanking
@@ -14,7 +14,7 @@ Feature: Application login
     Then Home Page is displayed
     And Cards are displayed
 
-  @SmokeTest @RegressionTest
+  @SmokeTest @RegressionTest @Mortgage
   Scenario Outline: User page default login
 
     Given User is on NetBanking landing page
