@@ -16,4 +16,12 @@ public class LandingPage {
     public void searchItem(String shortName) {
         driver.findElement(search).sendKeys(shortName);
     }
+
+    public void getSearchItem() {
+        driver.findElement(search).getText();
+    }
+
+    public String getProductName() {
+        return driver.findElement(productName).getText();
+    }
 }

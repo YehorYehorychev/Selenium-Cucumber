@@ -34,7 +34,7 @@ public class LandingPageStepDefinitions {
 
         testContextSetup.wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h4[normalize-space()='Tomato - 1 Kg']")));
 
-        testContextSetup.landingPageProductName =  testContextSetup.driver.findElement(By.xpath("//h4[normalize-space()='Tomato - 1 Kg']")).getText().split("-")[0].trim();
+        testContextSetup.landingPageProductName = landingPage.getProductName().split("-")[0].trim();
         System.out.println(testContextSetup.landingPageProductName + " is extracted from Home Page");
     }
 }
