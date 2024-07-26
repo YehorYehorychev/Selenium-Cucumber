@@ -2,19 +2,14 @@ package com.yehorychev.stepDefinitions;
 
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.util.Iterator;
 import java.util.Set;
 
-public class OfferPageStepDefinition {
-    public WebDriver driver;
-    public String landingPageProductName;
+public class OfferPageStepDefinitions {
     public String offerPageProductName;
-    public WebDriverWait wait;
 
     @Then("User searched for {string} shortname in offers page")
     public void user_searched_for_shortname_in_offers_page(String shortName) throws InterruptedException {
