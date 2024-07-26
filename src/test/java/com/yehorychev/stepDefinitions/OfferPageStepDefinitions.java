@@ -19,13 +19,7 @@ public class OfferPageStepDefinitions {
 
     @Then("User searched for {string} shortname in offers page")
     public void user_searched_for_shortname_in_offers_page(String shortName) throws InterruptedException {
-        testContextSetup.driver.findElement(By.xpath("//a[normalize-space()='Top Deals']")).click();
-        Set<String> windowHandles = testContextSetup.driver.getWindowHandles();
-        Iterator<String> iterator = windowHandles.iterator();
-        String parentWindow = iterator.next();
-        String childWindow = iterator.next();
-        testContextSetup.driver.switchTo().window(childWindow);
-
+        switchToOffersPage();
         testContextSetup.driver.findElement(By.xpath("//input[@type='search']")).sendKeys(shortName);
         testContextSetup.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("tr td:nth-child(1)")));
         offerPageProductName = testContextSetup.driver.findElement(By.cssSelector("tr td:nth-child(1)")).getText();
@@ -36,5 +30,22 @@ public class OfferPageStepDefinitions {
         Assert.assertEquals(offerPageProductName, testContextSetup.landingPageProductName);
         System.out.println("******** Landing page product name is: " + testContextSetup.landingPageProductName +
                 " ******* Offers Page product name is: " + offerPageProductName);
+    }
+
+    public void switchToOffersPage() {
+        String currentUrl = testContextSetup.driver.getCurrentUrl();
+        String targetUrl = "https://rahulshettyacademy.com/seleniumPractise/#/offers";
+
+        if (!currentUrl.equals(targetUrl)) {
+            testContextSetup.driver.findElement(By.xpath("//a[normalize-space()='Top Deals']")).click();
+
+            Set<String> windowHandles = testContextSetup.driver.getWindowHandles();
+            Iterator<String> iterator = windowHandles.iterator();
+
+            String parentWindow = iterator.next();
+            String childWindow = iterator.next();
+
+            testContextSetup.driver.switchTo().window(childWindow);
+        }
     }
 }
