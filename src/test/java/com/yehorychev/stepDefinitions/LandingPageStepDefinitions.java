@@ -29,7 +29,7 @@ public class LandingPageStepDefinitions {
 
     @When("User searched with shortname {string} and extracted actual name of product")
     public void user_searched_with_shortname_and_extracted_actual_name_of_product(String shortName) {
-        LandingPage landingPage = new LandingPage(testContextSetup.driver);
+        LandingPage landingPage = testContextSetup.pageObjectManager.getLandingPage();
         landingPage.searchItem(shortName);
 
         testContextSetup.wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h4[normalize-space()='Tomato - 1 Kg']")));

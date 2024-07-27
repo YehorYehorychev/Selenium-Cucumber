@@ -10,8 +10,9 @@ public class LandingPage {
         this.driver = driver;
     }
 
-    By search = By.xpath("//input[@type='search']");
-    By productName = By.xpath("//h4[normalize-space()='Tomato - 1 Kg']");
+    private By search = By.xpath("//input[@type='search']");
+    private By productName = By.xpath("//h4[normalize-space()='Tomato - 1 Kg']");
+    private By topDeals = By.xpath("//a[normalize-space()='Top Deals']");
 
     public void searchItem(String shortName) {
         driver.findElement(search).sendKeys(shortName);
@@ -23,5 +24,9 @@ public class LandingPage {
 
     public String getProductName() {
         return driver.findElement(productName).getText();
+    }
+
+    public void selectTopDealsPage() {
+        driver.findElement(topDeals).click();
     }
 }
