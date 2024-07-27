@@ -1,5 +1,6 @@
 package com.yehorychev.stepDefinitions;
 
+import com.yehorychev.pageObjects.OffersPage;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -20,9 +21,10 @@ public class OfferPageStepDefinitions {
     @Then("User searched for {string} shortname in offers page")
     public void user_searched_for_shortname_in_offers_page(String shortName) throws InterruptedException {
         switchToOffersPage();
-        testContextSetup.driver.findElement(By.xpath("//input[@type='search']")).sendKeys(shortName);
+        OffersPage offersPage = new OffersPage(testContextSetup.driver);
+        offersPage.searchItem(shortName);
         testContextSetup.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("tr td:nth-child(1)")));
-        offerPageProductName = testContextSetup.driver.findElement(By.cssSelector("tr td:nth-child(1)")).getText();
+        offerPageProductName = offersPage.getProductName();
     }
 
     @Then("Validate product name in Offers Page matches with Landing Page")
