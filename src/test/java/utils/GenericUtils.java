@@ -21,4 +21,8 @@ public class GenericUtils {
 
         driver.switchTo().window(childWindow);
     }
+
+    public String getTargetURL(String url) {
+        return url;
+    }
 }
