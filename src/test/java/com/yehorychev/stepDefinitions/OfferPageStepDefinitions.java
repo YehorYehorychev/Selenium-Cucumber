@@ -41,21 +41,13 @@ public class OfferPageStepDefinitions {
     // --------------------------------------------------------------------------------------------
 
     public void switchToOffersPage() {
-        String currentUrl = testContextSetup.driver.getCurrentUrl();
-        String targetUrl = "https://rahulshettyacademy.com/seleniumPractise/#/offers";
         pageObjectManager = new PageObjectManager(testContextSetup.driver);
         LandingPage landingPage = testContextSetup.pageObjectManager.getLandingPage();
 
-        if (!currentUrl.equals(targetUrl)) {
+        if (!testContextSetup.driver.getCurrentUrl().equals(testContextSetup.genericUtils.
+                getTargetURL("https://rahulshettyacademy.com/seleniumPractise/#/offers"))) {
             landingPage.selectTopDealsPage();
-
-            Set<String> windowHandles = testContextSetup.driver.getWindowHandles();
-            Iterator<String> iterator = windowHandles.iterator();
-
-            String parentWindow = iterator.next();
-            String childWindow = iterator.next();
-
-            testContextSetup.driver.switchTo().window(childWindow);
+            testContextSetup.genericUtils.switchWindowToChild();
         }
     }
 }
