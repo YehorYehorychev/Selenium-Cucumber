@@ -48,14 +48,7 @@ public class OfferPageStepDefinitions {
 
         if (!currentUrl.equals(targetUrl)) {
             landingPage.selectTopDealsPage();
-
-            Set<String> windowHandles = testContextSetup.driver.getWindowHandles();
-            Iterator<String> iterator = windowHandles.iterator();
-
-            String parentWindow = iterator.next();
-            String childWindow = iterator.next();
-
-            testContextSetup.driver.switchTo().window(childWindow);
+            testContextSetup.genericUtils.switchWindowToChild();
         }
     }
 }
