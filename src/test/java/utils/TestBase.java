@@ -12,10 +12,13 @@ public class TestBase {
     public WebDriverWait wait;
 
     public WebDriver WebDriverManager() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.get("https://rahulshettyacademy.com/seleniumPractise/#/");
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        if (driver == null) {
+            WebDriverManager.chromedriver().setup();
+            driver = new ChromeDriver();
+            driver.get("https://rahulshettyacademy.com/seleniumPractise/#/");
+            wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            return driver;
+        }
         return driver;
     }
 }
