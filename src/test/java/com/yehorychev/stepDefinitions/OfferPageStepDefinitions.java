@@ -24,7 +24,6 @@ public class OfferPageStepDefinitions {
     @Then("User searched for {string} shortname in offers page")
     public void user_searched_for_shortname_in_offers_page(String shortName) throws InterruptedException {
         switchToOffersPage();
-//        OffersPage offersPage = new OffersPage(testContextSetup.driver);
         OffersPage offersPage = testContextSetup.pageObjectManager.getOffersPage();
         offersPage.searchItem(shortName);
         testContextSetup.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("tr td:nth-child(1)")));
