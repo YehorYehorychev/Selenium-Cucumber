@@ -45,4 +45,7 @@ public class TestBase {
         }
         return driver;
     }
+    public WebDriverWait getWait() {
+        return wait;
+    }
 }

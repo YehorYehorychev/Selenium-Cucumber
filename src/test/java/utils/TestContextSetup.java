@@ -16,6 +16,8 @@ public class TestContextSetup {
 
     public TestContextSetup() throws IOException {
         testBase = new TestBase();
+        driver = testBase.webDriverManager();
+        wait = testBase.getWait();
         pageObjectManager = new PageObjectManager(testBase.webDriverManager());
         genericUtils = new GenericUtils(testBase.webDriverManager());
     }
