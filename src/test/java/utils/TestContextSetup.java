@@ -4,6 +4,8 @@ import com.yehorychev.pageObjects.PageObjectManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.IOException;
+
 public class TestContextSetup {
     public WebDriver driver;
     public String landingPageProductName;
@@ -12,9 +14,11 @@ public class TestContextSetup {
     public TestBase testBase;
     public GenericUtils genericUtils;
 
-    public TestContextSetup() {
+    public TestContextSetup() throws IOException {
         testBase = new TestBase();
-        pageObjectManager = new PageObjectManager(testBase.WebDriverManager());
-        genericUtils = new GenericUtils(testBase.WebDriverManager());
+        driver = testBase.webDriverManager();
+        wait = testBase.getWait();
+        pageObjectManager = new PageObjectManager(testBase.webDriverManager());
+        genericUtils = new GenericUtils(testBase.webDriverManager());
     }
 }
