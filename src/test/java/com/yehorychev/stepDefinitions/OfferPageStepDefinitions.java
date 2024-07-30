@@ -9,9 +9,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import utils.TestContextSetup;
 
-import java.util.Iterator;
-import java.util.Set;
-
 public class OfferPageStepDefinitions {
     public String offerPageProductName;
     TestContextSetup testContextSetup;
@@ -26,7 +23,7 @@ public class OfferPageStepDefinitions {
         switchToOffersPage();
         OffersPage offersPage = testContextSetup.pageObjectManager.getOffersPage();
         offersPage.searchItem(shortName);
-        testContextSetup.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("tr td:nth-child(1)")));
+        testContextSetup.testBase.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("tr td:nth-child(1)")));
         offerPageProductName = offersPage.getProductName();
     }
 
