@@ -1,5 +1,6 @@
 Feature: Search and place the order for Products
 
+  @OffersPage
   Scenario Outline: Search Experience for product search in both Home page and Offers page
 
     Given User is on GreenKart Landing page
@@ -9,5 +10,4 @@ Feature: Search and place the order for Products
 
     Examples:
     | Name       |
-    | Tom        |
-    | Cucumber   |
+    | Tomato     |
