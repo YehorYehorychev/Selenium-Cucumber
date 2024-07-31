@@ -10,4 +10,4 @@ Feature: Search and place the order for Products
     Examples:
     | Name       |
     | Tom        |
-    | Beetroot   |
+    | Cucumber   |
