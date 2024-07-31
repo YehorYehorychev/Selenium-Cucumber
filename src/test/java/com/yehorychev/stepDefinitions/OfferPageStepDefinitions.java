@@ -2,6 +2,7 @@ package com.yehorychev.stepDefinitions;
 
 import com.yehorychev.pageObjects.LandingPage;
 import com.yehorychev.pageObjects.OffersPage;
+import com.yehorychev.pageObjects.PageObjectManager;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -11,6 +12,7 @@ import utils.TestContextSetup;
 public class OfferPageStepDefinitions {
     public String offerPageProductName;
     TestContextSetup testContextSetup;
+    PageObjectManager pageObjectManager;
 
     public OfferPageStepDefinitions(TestContextSetup testContextSetup) {
         this.testContextSetup = testContextSetup;

@@ -14,6 +14,7 @@ public class CheckoutPage {
     private By checkoutButton = By.xpath("//button[contains(text(),'PROCEED TO CHECKOUT')]");
     private By promoButton = By.cssSelector(".promoBtn");
     private By placeOrderButton = By.xpath("//button[contains(text(),'Place Order')]");
+    private By productName = By.xpath("//p[contains(text(),'Tomato')]");
 
 
     public void checkoutItems() {
@@ -21,11 +22,15 @@ public class CheckoutPage {
         driver.findElement(checkoutButton).click();
     }
 
-    public void verifyPromoButton() {
-        driver.findElement(promoButton).isDisplayed();
+    public Boolean verifyPromoButton() {
+        return driver.findElement(promoButton).isDisplayed();
     }
 
-    public void verifyPlaceOrder() {
-        driver.findElement(placeOrderButton).isDisplayed();
+    public Boolean verifyPlaceOrder() {
+        return driver.findElement(placeOrderButton).isDisplayed();
+    }
+
+    public String getProductName() {
+        return driver.findElement(productName).getText().split("-")[0].trim();
     }
 }

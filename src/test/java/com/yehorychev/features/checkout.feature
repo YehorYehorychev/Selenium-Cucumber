@@ -1,5 +1,6 @@
 Feature: Place the order for Products
 
+  @PlaceOrder
   Scenario Outline: Search and Checkout Experience for product search in both Home page and Offers page
 
     Given User is on GreenKart Landing page
@@ -10,4 +11,4 @@ Feature: Place the order for Products
 
     Examples:
     | Name       |
-    | Tom        |
+    | Tomato     |
