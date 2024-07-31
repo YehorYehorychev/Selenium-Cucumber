@@ -6,7 +6,7 @@ import org.testng.annotations.DataProvider;
 
 @CucumberOptions(features = "src/test/java/com/yehorychev/features", dryRun = false,
         glue = "com.yehorychev.stepDefinitions", monochrome = true,
-//        tags = "@PlaceOrder",
+        tags = "@PlaceOrder or @OffersPage",
         plugin = {"pretty", "html:target/cucumber.html", "json:target/cucumber.json"})
 public class TestNGRunner extends AbstractTestNGCucumberTests {
 

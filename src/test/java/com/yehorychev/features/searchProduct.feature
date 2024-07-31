@@ -11,3 +11,4 @@ Feature: Search and place the order for Products
     Examples:
     | Name       |
     | Tomato     |
+    | Beet       |
