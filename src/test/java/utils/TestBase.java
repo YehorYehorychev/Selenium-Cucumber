@@ -41,7 +41,7 @@ public class TestBase {
                 default -> throw new IllegalArgumentException("Unsupported browser: " + browser);
             }
             driver.get(qaUrl);
-            wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+            wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         }
         return driver;
     }
