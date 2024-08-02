@@ -140,6 +140,8 @@ public class GenericUtils {
         }
     }
 
+    // Mouse control
+
     public void doubleClick(WebElement element) {
         Actions actions = new Actions(driver);
         actions.doubleClick(element).perform();
