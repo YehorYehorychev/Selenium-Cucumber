@@ -45,6 +45,8 @@ public class GenericUtils {
         }
     }
 
+    // Wait for element with condition
+
     public WebElement waitForElementToBeVisible(WebElement element) {
         return wait.until(ExpectedConditions.visibilityOf(element));
     }
@@ -117,11 +119,6 @@ public class GenericUtils {
         new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds)).until(pageLoadCondition);
     }
 
-    public void scrollToElement(WebElement element) {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView(true);", element);
-    }
-
     public void switchToNewTab() {
         String currentWindow = driver.getWindowHandle();
         Set<String> allWindows = driver.getWindowHandles();
@@ -173,6 +170,11 @@ public class GenericUtils {
     public void scrollBy(int xPixels, int yPixels) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(arguments[0], arguments[1]);", xPixels, yPixels);
+    }
+
+    public void scrollToElement(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView(true);", element);
     }
 
     // Alerts
