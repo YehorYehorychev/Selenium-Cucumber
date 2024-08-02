@@ -14,8 +14,6 @@ import java.io.IOException;
 public class LandingPageStepDefinitions {
     TestContextSetup testContextSetup;
     public WebDriver driver;
-    public String landingPageProductName;
-    public String offerPageProductName;
     LandingPage landingPage;
 
     public LandingPageStepDefinitions(TestContextSetup testContextSetup) {

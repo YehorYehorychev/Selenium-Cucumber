@@ -8,8 +8,6 @@ import utils.TestContextSetup;
 
 public class CheckoutPageStepDefinitions {
     public WebDriver driver;
-    public String landingPageProductName;
-    public String offerPageProductName;
     public CheckoutPage checkoutPage;
     TestContextSetup testContextSetup;
 
