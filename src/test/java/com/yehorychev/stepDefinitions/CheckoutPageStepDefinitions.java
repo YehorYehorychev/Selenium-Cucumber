@@ -19,8 +19,6 @@ public class CheckoutPageStepDefinitions {
     @Then("^User proceeds to checkout and validate the (.+) items in checkout page$")
     public void user_proceeds_to_checkout_and_validate_the_tom_items_in_checkout_page(String expectedProductName) throws InterruptedException {
         checkoutPage.checkoutItems();
-        // WORK IN PROGRESS | Setup ExplicitWaits ->
-        Thread.sleep(3000);
         String actualProductName = checkoutPage.getProductName();
         Assert.assertEquals(actualProductName, expectedProductName, "Product name does not match!");
     }

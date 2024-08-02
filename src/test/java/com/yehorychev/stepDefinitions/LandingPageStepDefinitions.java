@@ -3,9 +3,8 @@ package com.yehorychev.stepDefinitions;
 import com.yehorychev.pageObjects.LandingPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import utils.TestContextSetup;
 
@@ -31,8 +30,7 @@ public class LandingPageStepDefinitions {
     public void user_searched_with_shortname_and_extracted_actual_name_of_product(String shortName) throws InterruptedException {
         landingPage.searchItem(shortName);
         // WORK IN PROGRESS | Setup ExplicitWaits ->
-        Thread.sleep(3000);
-        testContextSetup.wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h4[normalize-space()='Tomato - 1 Kg']")));
+        forceWaitUsingJavaScript(testContextSetup.driver, 2000);
         testContextSetup.landingPageProductName = landingPage.getProductName().split("-")[0].trim();
         System.out.println(testContextSetup.landingPageProductName + " is extracted from Home Page");
     }
@@ -41,5 +39,9 @@ public class LandingPageStepDefinitions {
     public void added_items_of_the_selected_product_to_cart(String quantity) {
         landingPage.incrementQuantity(Integer.parseInt(quantity));
         landingPage.addToCart();
+    }
+
+    public void forceWaitUsingJavaScript(WebDriver driver, int milliseconds) {
+        ((JavascriptExecutor) testContextSetup.driver).executeAsyncScript("window.setTimeout(arguments[arguments.length - 1], " + milliseconds + ");");
     }
 }

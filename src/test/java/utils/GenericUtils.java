@@ -119,6 +119,12 @@ public class GenericUtils {
         new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds)).until(pageLoadCondition);
     }
 
+    /* Use this method if you need to wait for the fixed amount of time.
+     For example: you need to wait 2 second after page is loaded */
+    public void waitForFixedAmountOfTime(WebDriver driver, int milliseconds) {
+        ((JavascriptExecutor) driver).executeAsyncScript("window.setTimeout(arguments[arguments.length - 1], " + milliseconds + ");");
+    }
+
     public void switchToNewTab() {
         String currentWindow = driver.getWindowHandle();
         Set<String> allWindows = driver.getWindowHandles();

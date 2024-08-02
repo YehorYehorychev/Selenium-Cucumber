@@ -4,8 +4,6 @@ import com.yehorychev.pageObjects.LandingPage;
 import com.yehorychev.pageObjects.OffersPage;
 import com.yehorychev.pageObjects.PageObjectManager;
 import io.cucumber.java.en.Then;
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import utils.TestContextSetup;
 
@@ -23,7 +21,6 @@ public class OfferPageStepDefinitions {
         switchToOffersPage();
         OffersPage offersPage = testContextSetup.pageObjectManager.getOffersPage();
         offersPage.searchItem(shortName);
-        testContextSetup.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("tr td:nth-child(1)")));
         offerPageProductName = offersPage.getProductName();
     }
 
