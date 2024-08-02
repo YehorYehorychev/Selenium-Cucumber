@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.FileInputStream;
@@ -22,9 +23,12 @@ public class TestBase {
         Properties properties = new Properties();
         properties.load(fileInputStream);
         String qaUrl = properties.getProperty("QAUrl");
+        String browser_properties = properties.getProperty("browser");
+        String browser_maven = System.getProperty("browser");
+
+        String browser = browser_maven != null ? browser_maven : browser_properties;
 
         if (driver == null) {
-            String browser = properties.getProperty("browser");
             switch (browser) {
                 case "chrome" -> {
                     WebDriverManager.chromedriver().setup();
@@ -38,6 +42,10 @@ public class TestBase {
                     WebDriverManager.edgedriver().setup();
                     driver = new EdgeDriver();
                 }
+                case "safari" -> {
+                    WebDriverManager.safaridriver().setup();
+                    driver = new SafariDriver();
+                }
                 default -> throw new IllegalArgumentException("Unsupported browser: " + browser);
             }
             driver.get(qaUrl);
@@ -45,6 +53,7 @@ public class TestBase {
         }
         return driver;
     }
+
     public WebDriverWait getWait() {
         return wait;
     }
