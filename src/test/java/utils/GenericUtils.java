@@ -173,6 +173,8 @@ public class GenericUtils {
         js.executeScript("window.scrollBy(arguments[0], arguments[1]);", xPixels, yPixels);
     }
 
+    // Alerts
+
     public void acceptAlert() {
         driver.switchTo().alert().accept();
     }
