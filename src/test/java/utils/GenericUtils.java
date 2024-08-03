@@ -1,5 +1,7 @@
 package utils;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -12,6 +14,7 @@ import java.util.List;
 import java.util.Set;
 
 public class GenericUtils {
+    private static final Logger log = LogManager.getLogger(GenericUtils.class);
     public WebDriver driver;
     public WebDriverWait wait;
     public WebDriverWait waitLong;
@@ -111,18 +114,19 @@ public class GenericUtils {
         wait.until(ExpectedConditions.stalenessOf(element));
     }
 
-    public static void waitForPageLoad(WebDriver driver, int timeoutInSeconds) {
-        ExpectedCondition<Boolean> pageLoadCondition = driver1 -> {
-            assert driver1 != null;
-            return ((JavascriptExecutor) driver1).executeScript("return document.readyState").equals("complete");
-        };
-        new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds)).until(pageLoadCondition);
+    public void waitForPageLoad(int timeoutInSeconds) {
+        log.info("Waiting for page to load completely");
+        new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds)).until(
+                webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete")
+        );
+        log.info("Page loaded successfully");
     }
 
     /* Use this method if you need to wait for the fixed amount of time.
      For example: you need to wait 2 second after page is loaded */
     public void waitForFixedAmountOfTime(WebDriver driver, int milliseconds) {
         ((JavascriptExecutor) driver).executeAsyncScript("window.setTimeout(arguments[arguments.length - 1], " + milliseconds + ");");
+        log.info("Waited for a fixed amount of time: {} milliseconds", milliseconds);
     }
 
     public void switchToNewTab() {
