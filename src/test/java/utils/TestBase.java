@@ -18,18 +18,12 @@ public class TestBase {
     public WebDriverWait wait;
 
     public WebDriver webDriverManager() throws IOException {
-        FileInputStream fileInputStream = new FileInputStream(System.getProperty("user.dir") +
-                "//src//test//resources//global.properties");
-        Properties properties = new Properties();
-        properties.load(fileInputStream);
-        String qaUrl = properties.getProperty("QAUrl");
-        String browser_properties = properties.getProperty("browser");
-        String browser_maven = System.getProperty("browser");
-
-        String browser = browser_maven != null ? browser_maven : browser_properties;
-
         if (driver == null) {
-            switch (browser) {
+            Properties properties = loadProperties();
+            String browser = properties.getProperty("browser", "chrome");
+            String qaUrl = properties.getProperty("QAUrl");
+
+            switch (browser.toLowerCase()) {
                 case "chrome" -> {
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
@@ -48,10 +42,22 @@ public class TestBase {
                 }
                 default -> throw new IllegalArgumentException("Unsupported browser: " + browser);
             }
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds
+                    (Long.parseLong(properties.getProperty("timeout"))));
             driver.get(qaUrl);
-            wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            wait = new WebDriverWait(driver, Duration.ofSeconds
+                    (Long.parseLong(properties.getProperty("timeout"))));
         }
         return driver;
+    }
+
+    private Properties loadProperties() throws IOException {
+        Properties properties = new Properties();
+        try (FileInputStream fileInputStream = new FileInputStream(System.getProperty("user.dir")
+                + "/src/test/resources/global.properties")) {
+            properties.load(fileInputStream);
+        }
+        return properties;
     }
 
     public WebDriverWait getWait() {

@@ -4,16 +4,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import utils.GenericUtils;
 
 import java.time.Duration;
 
-public class CheckoutPage {
+public class CheckoutPage extends GenericUtils {
     public WebDriver driver;
     private WebDriverWait wait;
 
     public CheckoutPage(WebDriver driver) {
+        super(driver);
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         PageFactory.initElements(driver, this);
@@ -35,19 +36,19 @@ public class CheckoutPage {
     private WebElement productName;
 
     public void checkoutItems() {
-        wait.until(ExpectedConditions.elementToBeClickable(cartBag)).click();
-        wait.until(ExpectedConditions.elementToBeClickable(checkoutButton)).click();
+        waitForElementToBeClickable(cartBag).click();
+        waitForElementToBeClickable(checkoutButton).click();
     }
 
     public Boolean verifyPromoButton() {
-        return wait.until(ExpectedConditions.visibilityOf(promoButton)).isDisplayed();
+        return waitForElementToBeVisible(promoButton).isDisplayed();
     }
 
     public Boolean verifyPlaceOrder() {
-        return wait.until(ExpectedConditions.visibilityOf(placeOrderButton)).isDisplayed();
+        return waitForElementToBeVisible(placeOrderButton).isDisplayed();
     }
 
     public String getProductName() {
-        return wait.until(ExpectedConditions.visibilityOf(productName)).getText().split("-")[0].trim();
+        return waitForElementToBeVisible(productName).getText().split("-")[0].trim();
     }
 }
