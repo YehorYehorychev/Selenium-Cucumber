@@ -131,6 +131,7 @@ public class GenericUtils {
         log.info("Waited for a fixed amount of time: {} milliseconds", milliseconds);
     }
 
+    // Switching between tabs
     public void switchToNewTab() {
         String currentWindow = driver.getWindowHandle();
         Set<String> allWindows = driver.getWindowHandles();
