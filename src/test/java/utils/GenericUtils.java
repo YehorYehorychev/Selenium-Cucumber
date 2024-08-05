@@ -48,7 +48,7 @@ public class GenericUtils {
         }
     }
 
-    // Wait for element with condition
+    // Wait for element with specific conditions
 
     public WebElement waitForElementToBeVisible(WebElement element) {
         return wait.until(ExpectedConditions.visibilityOf(element));
@@ -147,7 +147,7 @@ public class GenericUtils {
         }
     }
 
-    // Mouse control
+    // Mouse control methods
 
     public void doubleClick(WebElement element) {
         Actions actions = new Actions(driver);
