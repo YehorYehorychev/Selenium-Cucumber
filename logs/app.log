@@ -288,3 +288,65 @@
 2024-08-05 10:53:50 [TestNG-PoolService-1] INFO  com.yehorychev.stepDefinitions.CheckoutPageStepDefinitions - Verifying the presence of promo code button and place order button
 2024-08-05 10:53:51 [TestNG-PoolService-1] INFO  com.yehorychev.stepDefinitions.CheckoutPageStepDefinitions - Promo code button is present
 2024-08-05 10:53:51 [TestNG-PoolService-1] INFO  com.yehorychev.stepDefinitions.CheckoutPageStepDefinitions - Place order button is present
+2024-08-06 14:36:39 [TestNG-PoolService-1] INFO  com.yehorychev.stepDefinitions.LandingPageStepDefinitions - Navigating to GreenKart Landing page
+2024-08-06 14:36:42 [TestNG-PoolService-2] INFO  com.yehorychev.stepDefinitions.LandingPageStepDefinitions - Navigating to GreenKart Landing page
+2024-08-06 14:36:42 [TestNG-PoolService-2] INFO  com.yehorychev.stepDefinitions.LandingPageStepDefinitions - Page title is: GreenKart - veg and fruits kart
+2024-08-06 14:36:42 [TestNG-PoolService-2] INFO  com.yehorychev.stepDefinitions.LandingPageStepDefinitions - User is on GreenKart Landing page successfully
+2024-08-06 14:36:42 [TestNG-PoolService-2] INFO  com.yehorychev.stepDefinitions.LandingPageStepDefinitions - Searching for product with shortname: Tomato
+2024-08-06 14:36:43 [TestNG-PoolService-3] INFO  com.yehorychev.stepDefinitions.LandingPageStepDefinitions - Navigating to GreenKart Landing page
+2024-08-06 14:36:43 [TestNG-PoolService-3] INFO  com.yehorychev.stepDefinitions.LandingPageStepDefinitions - Page title is: GreenKart - veg and fruits kart
+2024-08-06 14:36:43 [TestNG-PoolService-3] INFO  com.yehorychev.stepDefinitions.LandingPageStepDefinitions - User is on GreenKart Landing page successfully
+2024-08-06 14:36:43 [TestNG-PoolService-3] INFO  com.yehorychev.stepDefinitions.LandingPageStepDefinitions - Searching for product with shortname: Beet
+2024-08-06 14:36:43 [TestNG-PoolService-1] INFO  com.yehorychev.stepDefinitions.LandingPageStepDefinitions - Page title is: GreenKart - veg and fruits kart
+2024-08-06 14:36:43 [TestNG-PoolService-1] INFO  com.yehorychev.stepDefinitions.LandingPageStepDefinitions - User is on GreenKart Landing page successfully
+2024-08-06 14:36:43 [TestNG-PoolService-1] INFO  com.yehorychev.stepDefinitions.LandingPageStepDefinitions - Searching for product with shortname: Tomato
+2024-08-06 14:36:44 [TestNG-PoolService-2] INFO  utils.GenericUtils - Waited for a fixed amount of time: 2000 milliseconds
+2024-08-06 14:36:44 [TestNG-PoolService-2] INFO  com.yehorychev.stepDefinitions.LandingPageStepDefinitions - Extracted product name: Tomato
+2024-08-06 14:36:44 [TestNG-PoolService-2] INFO  com.yehorychev.stepDefinitions.OfferPageStepDefinitions - User searching for product with shortname: Tomato in Offers Page
+2024-08-06 14:36:44 [TestNG-PoolService-2] INFO  com.yehorychev.stepDefinitions.OfferPageStepDefinitions - Switching to Offers Page from current URL: https://rahulshettyacademy.com/seleniumPractise/#/
+2024-08-06 14:36:45 [TestNG-PoolService-2] INFO  com.yehorychev.stepDefinitions.OfferPageStepDefinitions - Switched to Offers Page
+2024-08-06 14:36:45 [TestNG-PoolService-2] INFO  com.yehorychev.stepDefinitions.OfferPageStepDefinitions - Product name extracted from Offers Page: Tomato
+2024-08-06 14:36:45 [TestNG-PoolService-2] INFO  com.yehorychev.stepDefinitions.OfferPageStepDefinitions - Validating product name in Offers Page matches with Landing Page
+2024-08-06 14:36:45 [TestNG-PoolService-2] INFO  com.yehorychev.stepDefinitions.OfferPageStepDefinitions - Product name validation successful. Offer page: Tomato, Landing page: Tomato
+2024-08-06 14:36:45 [TestNG-PoolService-3] INFO  utils.GenericUtils - Waited for a fixed amount of time: 2000 milliseconds
+2024-08-06 14:36:45 [TestNG-PoolService-1] INFO  utils.GenericUtils - Waited for a fixed amount of time: 2000 milliseconds
+2024-08-06 14:36:45 [TestNG-PoolService-1] INFO  com.yehorychev.stepDefinitions.LandingPageStepDefinitions - Extracted product name: Tomato
+2024-08-06 14:36:45 [TestNG-PoolService-1] INFO  com.yehorychev.stepDefinitions.LandingPageStepDefinitions - Adding 3 items of the selected product to cart
+2024-08-06 14:36:45 [TestNG-PoolService-1] INFO  com.yehorychev.stepDefinitions.LandingPageStepDefinitions - Items added to cart successfully
+2024-08-06 14:36:45 [TestNG-PoolService-1] INFO  com.yehorychev.stepDefinitions.CheckoutPageStepDefinitions - Proceeding to checkout and validating the items in checkout page
+2024-08-06 14:36:46 [TestNG-PoolService-1] INFO  com.yehorychev.stepDefinitions.CheckoutPageStepDefinitions - Actual product name in checkout: Tomato
+2024-08-06 14:36:46 [TestNG-PoolService-1] INFO  com.yehorychev.stepDefinitions.CheckoutPageStepDefinitions - Product name validation successful
+2024-08-06 14:36:46 [TestNG-PoolService-1] INFO  com.yehorychev.stepDefinitions.CheckoutPageStepDefinitions - Verifying the presence of promo code button and place order button
+2024-08-06 14:36:46 [TestNG-PoolService-1] INFO  com.yehorychev.stepDefinitions.CheckoutPageStepDefinitions - Promo code button is present
+2024-08-06 14:36:46 [TestNG-PoolService-1] INFO  com.yehorychev.stepDefinitions.CheckoutPageStepDefinitions - Place order button is present
+2024-08-06 14:38:16 [TestNG-PoolService-3] INFO  com.yehorychev.stepDefinitions.LandingPageStepDefinitions - Navigating to GreenKart Landing page
+2024-08-06 14:38:16 [TestNG-PoolService-3] INFO  com.yehorychev.stepDefinitions.LandingPageStepDefinitions - Page title is: GreenKart - veg and fruits kart
+2024-08-06 14:38:16 [TestNG-PoolService-3] INFO  com.yehorychev.stepDefinitions.LandingPageStepDefinitions - User is on GreenKart Landing page successfully
+2024-08-06 14:38:16 [TestNG-PoolService-3] INFO  com.yehorychev.stepDefinitions.LandingPageStepDefinitions - Searching for product with shortname: Beet
+2024-08-06 14:38:16 [TestNG-PoolService-1] INFO  com.yehorychev.stepDefinitions.LandingPageStepDefinitions - Navigating to GreenKart Landing page
+2024-08-06 14:38:16 [TestNG-PoolService-1] INFO  com.yehorychev.stepDefinitions.LandingPageStepDefinitions - Page title is: GreenKart - veg and fruits kart
+2024-08-06 14:38:16 [TestNG-PoolService-1] INFO  com.yehorychev.stepDefinitions.LandingPageStepDefinitions - User is on GreenKart Landing page successfully
+2024-08-06 14:38:16 [TestNG-PoolService-1] INFO  com.yehorychev.stepDefinitions.LandingPageStepDefinitions - Searching for product with shortname: Tomato
+2024-08-06 14:38:16 [TestNG-PoolService-2] INFO  com.yehorychev.stepDefinitions.LandingPageStepDefinitions - Navigating to GreenKart Landing page
+2024-08-06 14:38:16 [TestNG-PoolService-2] INFO  com.yehorychev.stepDefinitions.LandingPageStepDefinitions - Page title is: GreenKart - veg and fruits kart
+2024-08-06 14:38:16 [TestNG-PoolService-2] INFO  com.yehorychev.stepDefinitions.LandingPageStepDefinitions - User is on GreenKart Landing page successfully
+2024-08-06 14:38:16 [TestNG-PoolService-2] INFO  com.yehorychev.stepDefinitions.LandingPageStepDefinitions - Searching for product with shortname: Tomato
+2024-08-06 14:38:18 [TestNG-PoolService-3] INFO  utils.GenericUtils - Waited for a fixed amount of time: 2000 milliseconds
+2024-08-06 14:38:18 [TestNG-PoolService-1] INFO  utils.GenericUtils - Waited for a fixed amount of time: 2000 milliseconds
+2024-08-06 14:38:18 [TestNG-PoolService-1] INFO  com.yehorychev.stepDefinitions.LandingPageStepDefinitions - Extracted product name: Tomato
+2024-08-06 14:38:18 [TestNG-PoolService-1] INFO  com.yehorychev.stepDefinitions.LandingPageStepDefinitions - Adding 3 items of the selected product to cart
+2024-08-06 14:38:18 [TestNG-PoolService-2] INFO  utils.GenericUtils - Waited for a fixed amount of time: 2000 milliseconds
+2024-08-06 14:38:18 [TestNG-PoolService-2] INFO  com.yehorychev.stepDefinitions.LandingPageStepDefinitions - Extracted product name: Tomato
+2024-08-06 14:38:18 [TestNG-PoolService-2] INFO  com.yehorychev.stepDefinitions.OfferPageStepDefinitions - User searching for product with shortname: Tomato in Offers Page
+2024-08-06 14:38:18 [TestNG-PoolService-2] INFO  com.yehorychev.stepDefinitions.OfferPageStepDefinitions - Switching to Offers Page from current URL: https://rahulshettyacademy.com/seleniumPractise/#/
+2024-08-06 14:38:18 [TestNG-PoolService-1] INFO  com.yehorychev.stepDefinitions.LandingPageStepDefinitions - Items added to cart successfully
+2024-08-06 14:38:18 [TestNG-PoolService-1] INFO  com.yehorychev.stepDefinitions.CheckoutPageStepDefinitions - Proceeding to checkout and validating the items in checkout page
+2024-08-06 14:38:18 [TestNG-PoolService-2] INFO  com.yehorychev.stepDefinitions.OfferPageStepDefinitions - Switched to Offers Page
+2024-08-06 14:38:18 [TestNG-PoolService-2] INFO  com.yehorychev.stepDefinitions.OfferPageStepDefinitions - Product name extracted from Offers Page: Tomato
+2024-08-06 14:38:18 [TestNG-PoolService-2] INFO  com.yehorychev.stepDefinitions.OfferPageStepDefinitions - Validating product name in Offers Page matches with Landing Page
+2024-08-06 14:38:18 [TestNG-PoolService-2] INFO  com.yehorychev.stepDefinitions.OfferPageStepDefinitions - Product name validation successful. Offer page: Tomato, Landing page: Tomato
+2024-08-06 14:38:19 [TestNG-PoolService-1] INFO  com.yehorychev.stepDefinitions.CheckoutPageStepDefinitions - Actual product name in checkout: Tomato
+2024-08-06 14:38:19 [TestNG-PoolService-1] INFO  com.yehorychev.stepDefinitions.CheckoutPageStepDefinitions - Product name validation successful
+2024-08-06 14:38:19 [TestNG-PoolService-1] INFO  com.yehorychev.stepDefinitions.CheckoutPageStepDefinitions - Verifying the presence of promo code button and place order button
+2024-08-06 14:38:19 [TestNG-PoolService-1] INFO  com.yehorychev.stepDefinitions.CheckoutPageStepDefinitions - Promo code button is present
+2024-08-06 14:38:19 [TestNG-PoolService-1] INFO  com.yehorychev.stepDefinitions.CheckoutPageStepDefinitions - Place order button is present
