@@ -75,21 +75,21 @@ Project Structure 📂
 Selenium-Cucumber/
 ├── src/
 │   ├── main/
-│   │   └── resources/            # Contains log4j2.xml for logging configuration
+│   │   └── resources/ -> Contains log4j2.xml for logging configuration
 │   └── test/
 │       ├── java/
 │       │   └── com.yehorychev/
-│       │       ├── features/            # Contains .feature files for Cucumber scenarios
-│       │       ├── pageObjects/         # Contains Page Object Model classes
-│       │       ├── runner/              # Contains TestNGRunner and FailedTestRunner classes
-│       │       ├── stepDefinitions/     # Contains step definition classes for Cucumber
-│       │       └── utils/               # Contains utility classes like TestBase, TestContextSetup, and GenericUtils
-│       └── resources/                   # Contains configuration files (extent.properties, global.properties)
-├── target/                      # Generated files from build and test processes
-├── test-output                  # Test output files
-├── .gitignore                   # Git ignore file
-├── pom.xml                      # Maven Project Object Model file
-└── README.md                    # Project README file
+│       │       ├── features/ -> Contains .feature files for Cucumber scenarios
+│       │       ├── pageObjects/ -> Contains Page Object Model classes
+│       │       ├── runner/ -> Contains TestNGRunner and FailedTestRunner classes
+│       │       ├── stepDefinitions/ -> Contains step definition classes for Cucumber
+│       │       └── utils/ -> Contains utility classes like TestBase, TestContextSetup, and GenericUtils
+│       └── resources/ -> Contains configuration files (extent.properties, global.properties)
+├── target/ -> Generated files from build and test processes
+├── test-output -> Test output files/reports
+├── .gitignore -> Git ignore file
+├── pom.xml -> Maven Project Object Model file
+└── README.md -> Project README file
 
 ```
 
