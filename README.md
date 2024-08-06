@@ -8,7 +8,9 @@ Welcome to the Selenium-Cucumber-BDD framework repository! This project is desig
 - **PageFactory Implementation**
 - **Easy to Use** with simple commands to run tests
 - **Scalable and Maintainable** framework
-- **Support for Docker** to run tests in isolated containers
+- **Support for Docker 🐳** to run tests in isolated containers
+- **Logging with log4j2** for detailed test execution logs
+- **Beautiful Spark Reports** for test results visualization
 
 ## Getting Started 🚀
 
@@ -56,7 +58,7 @@ Run all tests
 mvn clean test
 ```
 
-### Running Tests in Docker
+### Running Tests in Docker 🐳
 
 Build Docker Image
 
@@ -75,22 +77,21 @@ Project Structure 📂
 Selenium-Cucumber/
 ├── src/
 │   ├── main/
-│   │   └── resources/ -> Contains log4j2.xml for logging configuration
+│   │   └── resources/            # Contains log4j2.xml for logging configuration
 │   └── test/
 │       ├── java/
 │       │   └── com.yehorychev/
-│       │       ├── features/ -> Contains .feature files for Cucumber scenarios
-│       │       ├── pageObjects/ -> Contains Page Object Model classes
-│       │       ├── runner/ -> Contains TestNGRunner and FailedTestRunner classes
-│       │       ├── stepDefinitions/ -> Contains step definition classes for Cucumber
-│       │       └── utils/ -> Contains utility classes like TestBase, TestContextSetup, and GenericUtils
-│       └── resources/ -> Contains configuration files (extent.properties, global.properties)
-├── target/ -> Generated files from build and test processes
-├── test-output -> Test output files/reports
-├── .gitignore -> Git ignore file
-├── pom.xml -> Maven Project Object Model file
-└── README.md -> Project README file
-
+│       │       ├── features/            # Contains .feature files for Cucumber scenarios
+│       │       ├── pageObjects/         # Contains Page Object Model classes
+│       │       ├── runner/              # Contains TestNGRunner and FailedTestRunner classes
+│       │       ├── stepDefinitions/     # Contains step definition classes for Cucumber
+│       │       └── utils/               # Contains utility classes like TestBase, TestContextSetup, and GenericUtils
+│       └── resources/                   # Contains configuration files (extent.properties, global.properties)
+├── target/                      # Generated files from build and test processes
+├── test-output                  # Test output files/reports
+├── .gitignore                   # Git ignore file
+├── pom.xml                      # Maven Project Object Model file
+└── README.md                    # Project README file
 ```
 
 Contributing 🤝
