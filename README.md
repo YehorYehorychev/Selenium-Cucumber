@@ -73,44 +73,24 @@ docker run -it selenium-cucumber
 Project Structure 📂
 ```
 Selenium-Cucumber/
-├── .idea/
-├── logs/
 ├── src/
-│ ├── main/
-│ │ └── resources/
-│ │ └── log4j2.xml
-│ └── test/
-│ ├── java/
-│ │ └── com/
-│ │ └── yehorychev/
-│ │ ├── features/
-│ │ │ ├── checkout.feature
-│ │ │ └── searchProduct.feature
-│ │ ├── pageObjects/
-│ │ │ ├── CheckoutPage.java
-│ │ │ ├── LandingPage.java
-│ │ │ ├── OffersPage.java
-│ │ │ └── PageObjectManager.java
-│ │ ├── runner/
-│ │ │ ├── FailedTestRunner.java
-│ │ │ └── TestNGRunner.java
-│ │ ├── stepDefinitions/
-│ │ │ ├── CheckoutPageStepDefinitions.java
-│ │ │ ├── Hooks.java
-│ │ │ ├── LandingPageStepDefinitions.java
-│ │ │ └── OfferPageStepDefinitions.java
-│ │ └── utils/
-│ │ ├── GenericUtils.java
-│ │ ├── TestBase.java
-│ │ └── TestContextSetup.java
-│ └── resources/
-│ ├── extent.properties
-│ └── global.properties
-├── target/
-│ └── test-output/
-├── .gitignore
-├── pom.xml
-└── README.md
+│   ├── main/
+│   │   └── resources/            # Contains log4j2.xml for logging configuration
+│   └── test/
+│       ├── java/
+│       │   └── com.yehorychev/
+│       │       ├── features/            # Contains .feature files for Cucumber scenarios
+│       │       ├── pageObjects/         # Contains Page Object Model classes
+│       │       ├── runner/              # Contains TestNGRunner and FailedTestRunner classes
+│       │       ├── stepDefinitions/     # Contains step definition classes for Cucumber
+│       │       └── utils/               # Contains utility classes like TestBase, TestContextSetup, and GenericUtils
+│       └── resources/                   # Contains configuration files (extent.properties, global.properties)
+├── target/                      # Generated files from build and test processes
+├── test-output                  # Test output files
+├── .gitignore                   # Git ignore file
+├── pom.xml                      # Maven Project Object Model file
+└── README.md                    # Project README file
+
 ```
 
 Contributing 🤝
