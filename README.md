@@ -22,14 +22,15 @@ Welcome to the Selenium-Cucumber-BDD framework repository! This project is desig
 ### Installation
 
 1. **Clone the repository**
-   ```sh
+   ```
    git clone https://github.com/YehorYehorychev/Selenium-Cucumber.git
    cd Selenium-Cucumber
 
-   Install dependencies
 ## Install dependencies
 
-`` mvn clean install ``
+```
+ mvn clean install
+```
 
 ## Running Tests
 
@@ -45,28 +46,29 @@ Welcome to the Selenium-Cucumber-BDD framework repository! This project is desig
 
 Run specific tagged tests
 
-``
+```
 mvn clean test -Dcucumber.filter.tags="@PlaceOrder" -Dbrowser=chrome
-``
+```
+
 Run all tests
 
-``
+```
 mvn clean test
-``
+```
 
 ### Running Tests in Docker
 
 Build Docker Image
 
-``
+```
 docker build -t selenium-cucumber .
-``
+```
 
 ### Run Docker Container
 
-``
+```
 docker run -it selenium-cucumber
-``
+```
 
 Project Structure 📂
 ```
