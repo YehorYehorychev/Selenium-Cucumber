@@ -8,7 +8,7 @@ Welcome to the Selenium-Cucumber-BDD framework repository! This project is desig
 - **PageFactory Implementation**
 - **Easy to Use** with simple commands to run tests
 - **Scalable and Maintainable** framework
-- **Support for Docker 🐳** to run tests in isolated containers
+- **Support for Docker 🐳** and Selenium Grid to run tests in isolated containers
 - **Logging with log4j2** for detailed test execution logs
 - **Beautiful Spark Reports** for test results visualization
 
