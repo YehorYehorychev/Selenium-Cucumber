@@ -60,16 +60,24 @@ mvn clean test
 
 ### Running Tests in Docker 🐳
 
+- Run Docker Desktop
+
+1. Create a jar file
+
+```
+ mvn clean package -DskipTests
+```
+
 Build Docker Image
 
 ```
 docker build -t selenium-cucumber .
 ```
 
-### Run Docker Container
+### Run Selenium Grid
 
 ```
-docker run -it selenium-cucumber
+docker-compose up
 ```
 
 Project Structure 📂
@@ -89,9 +97,12 @@ Selenium-Cucumber/
 │       └── resources/                   # Contains configuration files (extent.properties, global.properties)
 ├── target/                      # Generated files from build and test processes
 ├── test-output                  # Test output files/reports
+├── Dockerfile                   # Dockerfile for building the project image
+├── docker-compose.yml           # Docker Compose file for setting up Selenium Grid
 ├── .gitignore                   # Git ignore file
 ├── pom.xml                      # Maven Project Object Model file
 └── README.md                    # Project README file
+
 ```
 
 Contributing 🤝
