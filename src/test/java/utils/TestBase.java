@@ -124,4 +124,6 @@ public class TestBase {
 
     public WebDriverWait getWait() {
         return wait;
-    }*/
+    }
+}
+  */
