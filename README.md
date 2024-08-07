@@ -89,7 +89,7 @@ Project Structure 📂
 Selenium-Cucumber/
 ├── src/
 │   ├── main/
-│   │   └── resources/            # Contains log4j2.xml for logging configuration
+│   │   └── resources/                   # Contains log4j2.xml for logging configuration
 │   └── test/
 │       ├── java/
 │       │   └── com.yehorychev/
