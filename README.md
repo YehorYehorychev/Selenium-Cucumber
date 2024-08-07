@@ -80,6 +80,10 @@ docker build -t selenium-cucumber .
 docker-compose up
 ```
 
+Run Tests
+
+To run your tests inside the Docker container on Selenium Grid, use the ``TestNGRunner`` class or run ``mvn clean test``
+
 Project Structure 📂
 ```
 Selenium-Cucumber/
