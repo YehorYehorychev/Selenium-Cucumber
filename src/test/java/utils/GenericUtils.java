@@ -131,7 +131,7 @@ public class GenericUtils {
         log.info("Waited for a fixed amount of time: {} milliseconds", milliseconds);
     }
 
-    // Switching between tabs
+    // Switching Between Tabs
     public void switchToNewTab() {
         String currentWindow = driver.getWindowHandle();
         Set<String> allWindows = driver.getWindowHandles();
@@ -158,7 +158,7 @@ public class GenericUtils {
         element.sendKeys(filePath);
     }
 
-    // Mouse control methods
+    // Mouse Control Methods
 
     public void doubleClick(WebElement element) {
         Actions actions = new Actions(driver);
