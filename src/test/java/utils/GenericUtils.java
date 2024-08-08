@@ -190,7 +190,7 @@ public class GenericUtils {
         js.executeScript("arguments[0].scrollIntoView(true);", element);
     }
 
-    // Alerts
+    // Alerts handling
 
     public void acceptAlert() {
         driver.switchTo().alert().accept();
