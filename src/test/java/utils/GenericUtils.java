@@ -150,6 +150,14 @@ public class GenericUtils {
         }
     }
 
+    public boolean isTextPresent(String text) {
+        return driver.getPageSource().contains(text);
+    }
+
+    public void uploadFile(WebElement element, String filePath) {
+        element.sendKeys(filePath);
+    }
+
     // Mouse control methods
 
     public void doubleClick(WebElement element) {
@@ -170,14 +178,6 @@ public class GenericUtils {
     public void rightClick(WebElement element) {
         Actions actions = new Actions(driver);
         actions.contextClick(element).perform();
-    }
-
-    public boolean isTextPresent(String text) {
-        return driver.getPageSource().contains(text);
-    }
-
-    public void uploadFile(WebElement element, String filePath) {
-        element.sendKeys(filePath);
     }
 
     public void scrollBy(int xPixels, int yPixels) {
