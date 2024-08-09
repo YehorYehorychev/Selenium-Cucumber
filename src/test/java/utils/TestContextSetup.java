@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.IOException;
 
 public class TestContextSetup {
+    // This class manages shared test context, including WebDriver and Page Objects via PageObjectManager
     public WebDriver driver;
     public String landingPageProductName;
     public WebDriverWait wait;
