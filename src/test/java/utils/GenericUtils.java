@@ -16,6 +16,7 @@ import java.util.List;
 import java.util.Set;
 
 public class GenericUtils {
+    // This class provides common utility methods for WebDriver actions and wait conditions.
     private static final Logger log = LogManager.getLogger(GenericUtils.class);
     public WebDriver driver;
     public WebDriverWait wait;
