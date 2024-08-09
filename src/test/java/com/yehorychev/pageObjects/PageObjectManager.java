@@ -3,6 +3,7 @@ package com.yehorychev.pageObjects;
 import org.openqa.selenium.WebDriver;
 
 public class PageObjectManager {
+    // This class centralizes Page Object creation and management for reuse across tests
     public WebDriver driver;
     public LandingPage landingPage;
     public OffersPage offersPage;
