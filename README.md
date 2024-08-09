@@ -18,8 +18,7 @@ Welcome to the Selenium-Cucumber-BDD framework repository! This project is desig
 
 - Java JDK 11 or above
 - Maven 3.6 or above
-- ChromeDriver or GeckoDriver installed and set in your PATH
-- Docker (optional, for running tests in containers)
+- Docker or Docker Desktop (optional, for running tests in containers)
 
 ### Installation
 
