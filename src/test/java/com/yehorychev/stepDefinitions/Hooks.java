@@ -12,7 +12,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class Hooks {
-    // This class handles post-test actions like tear down and capturing screenshots after failed steps.
+    // This class handles post-test actions like tear down and capturing screenshots after failed steps
     TestContextSetup testContextSetup;
 
     public Hooks(TestContextSetup testContextSetup) {
