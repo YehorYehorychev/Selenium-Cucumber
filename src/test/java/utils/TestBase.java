@@ -19,7 +19,7 @@ import java.util.Properties;
 public class TestBase {
    /*
      This class sets up and manages the WebDriver instance and its configurations,
-     including browser type, timeouts, and grid setup.
+     including browser type, timeouts, and grid setup
    */
     public WebDriver driver;
     public WebDriverWait wait;
