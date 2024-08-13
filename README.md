@@ -61,7 +61,7 @@ mvn clean test
 
 - Run Docker Desktop
 
-1. Build a .jar file
+1. Build a ``.jar`` file
 
 ```
  mvn clean package -DskipTests
