@@ -37,7 +37,7 @@ Welcome to the Selenium-Cucumber-BDD framework repository! This project is desig
 
 ### You can run the tests using different methods:
 
-### Using TestNGRunner class
+### Using TestNGRunner class 
 
 - Open your IDE (e.g., IntelliJ IDEA or Eclipse).
 - Navigate to src/test/java/com/yehorychev/runner/TestNGRunner.java.
