@@ -14,7 +14,7 @@ Welcome to the Selenium-Cucumber-BDD framework repository! This project is desig
 
 ## Getting Started 🚀
 
-### Prerequisites 
+### Prerequisites
 
 - Java JDK 11 or above
 - Maven 3.6 or above
